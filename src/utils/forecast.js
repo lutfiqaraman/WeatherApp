@@ -21,14 +21,20 @@ exports.foreCast = (longitude, latitude, callBack) => {
       const weatherData = {
         temp: Math.round(responsedarksky.body.currently.temperature),
         chanceRain: responsedarksky.body.currently.precipProbability * 100,
-        summary: responsedarksky.body.daily.data[0].summary
+        summary: responsedarksky.body.daily.data[0].summary,
+        highTemp: Math.round(responsedarksky.body.daily.data[0].temperatureHigh),
+        lowTemp: Math.round(responsedarksky.body.daily.data[0].temperatureLow)
       };
 
       const data =
         weatherData.summary +
         " It is currently " +
-        weatherData.temp +
-        " degrees out. There is a " +
+        weatherData.temp + "&#8451; " +
+        " degrees out. This high today is " +
+        weatherData.highTemp + "&#8451; " +
+        " with a low of " +
+        weatherData.lowTemp + "&#8451; " +
+        ". There is a " +
         weatherData.chanceRain +
         "% chance of rain. ";
 

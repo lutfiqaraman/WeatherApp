@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const hbs = require("hbs");
 
-const requestForeCast = require("./utils/forecase");
+const requestForeCast = require("./utils/forecast");
 const requestGeoCode  = require("./utils/geocode");
 
 const app = express();
