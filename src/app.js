@@ -6,6 +6,7 @@ const requestForeCast = require("./utils/forecase");
 const requestGeoCode  = require("./utils/geocode");
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Setup handlebars engine and views location
 const partialsPath = path.join(__dirname, "../views/partials");
@@ -87,6 +88,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  process.stdout.write("Server is up on port 3000");
+app.listen(port, () => {
+  process.stdout.write("Server is up on port " + port);
 });
