@@ -1,9 +1,10 @@
+require('dotenv').config();
 const request = require("request");
 
 exports.foreCast = (longitude, latitude, callBack) => {
   const measurmentUnit = "?units=ca";
   const weatherURL =
-    "https://api.darksky.net/forecast/6471b15195d09bd94b4fe0b05ace7054/" +
+    "https://api.darksky.net/forecast/" + process.env.DARKSKY_API_KEY + "/" +
     latitude +
     "," +
     longitude +
