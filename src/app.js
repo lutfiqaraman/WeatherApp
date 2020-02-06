@@ -6,7 +6,7 @@ const requestForeCast = require("./utils/forecast");
 const requestGeoCode  = require("./utils/geocode");
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 // Setup handlebars engine and views location
 const partialsPath = path.join(__dirname, "../views/partials");
