@@ -11,7 +11,7 @@ exports.geoCode = (address, callBack) => {
       callBack("Unable to connect to mapbox service ...", undefined);
     } else if (responsemapbox.body.features.length === 0) {
       callBack(
-        "According to the information, location cannot be found ...",
+        "The location that you fill is not found ...",
         undefined
       );
     } else {
